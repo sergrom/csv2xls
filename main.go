@@ -703,6 +703,7 @@ func getStringCollectionFromCsvFile(csvFileName string, delimiter rune) StringCo
 
 	r := csv.NewReader(f)
 	r.Comma = delimiter
+	r.LazyQuotes = true
 
 	for {
 		record, err := r.Read()
