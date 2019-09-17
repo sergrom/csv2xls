@@ -151,7 +151,6 @@ func (ws *Worksheet) storeBof(buffer *bytes.Buffer) {
 
 	var build uint16 = 0x0DBB //    Excel 97
 	var year uint16 = 0x07CC //    Excel 97
-
 	var version uint16 = 0x0600 //    BIFF8
 
 	putVar(buffer, record, length, version, bType, build, year)

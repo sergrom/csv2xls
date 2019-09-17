@@ -33,19 +33,18 @@ func localDateToOLE(timestamp int64) string {
 	var factor int64 = 4294967296
 	var days int64 = 134774
 	bigDate :=  days * 24 * 3600 + timestamp + 10800
-
 	bigDate *= 10000000
 
 	highPart := int64(float64(bigDate) / float64(factor))
 	// lower 4 bytes
-	low_part := int(math.Floor(((float64(bigDate) / float64(factor)) - float64(highPart)) * float64(factor)))
+	lowPart := int(math.Floor(((float64(bigDate) / float64(factor)) - float64(highPart)) * float64(factor)))
 
 	buf := new(bytes.Buffer)
 	var hex int
 	for i := 0; i < 4; i++ {
-		hex = low_part % 256
+		hex = lowPart % 256
 		putVar(buf, uint8(hex))
-		low_part = int(math.Floor(float64(low_part) / 256))
+		lowPart = int(math.Floor(float64(lowPart) / 256))
 	}
 	for i := 0; i < 4; i++ {
 		hex = int(highPart) % 256
