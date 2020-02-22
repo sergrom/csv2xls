@@ -19,7 +19,7 @@ $ ./csv2xls -csv-file-name file.csv -xls-file-name file.xls
 <code>-last-modified-by</code> - The LastModifiedBy property of xls file. Optional parameter.
 
 ## Example
-For example you have csv file with name <b>cities.csv</b> and you wand to convert it into xls excel format. The content of csv file is, for example:
+For example you have csv file with name <b>cities.csv</b> and you want to convert it into xls excel format. The content of csv file is, for example:
 <pre>
 №,City,Population
 1,Moscow,"12,537,954"
