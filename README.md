@@ -4,7 +4,7 @@ The fast <strike>and furious</strike> converter excel format csv into xls.
 ## Usage
 After you compile the source code, run executable file as follows:
 ```bash
-$ ./csv2xls -csv-file-name file.csv -xls-file-name file.xls
+$ ./csv2xls -csv-file-name="file.csv" -xls-file-name="file.xls"
 ```
 
 ## Parameters and options
@@ -29,7 +29,7 @@ For example you have csv file with name <b>cities.csv</b> and you want to conver
 
 You can convert it by running command in your terminal:
 ```bash
-./csv2xls -csv-file-name cities.csv -xls-file-name cities.xls -csv-delimiter=","
+./csv2xls -csv-file-name="cities.csv" -xls-file-name="cities.xls" -csv-delimiter=","
 ```
 
 And then you will have a newly created file <b>cities.xls</b> in the same directory.<br>
