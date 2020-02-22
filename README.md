@@ -33,4 +33,6 @@ You can convert it by running command in your terminal:
 ```
 
 And then you will have a newly created file <b>cities.xls</b> in the same directory.<br>
+![xls](https://user-images.githubusercontent.com/17692545/75096799-20252180-55b4-11ea-8ffc-6986086f5163.png)
+<br>
 Enjoy)
