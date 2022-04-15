@@ -3,7 +3,7 @@ The fast <strike>and furious</strike> converter excel format csv into xls.
 
 ## Install
 ```bash
-$ go install github.com/sergrom/csv2xls@latest
+$ go install github.com/sergrom/csv2xls/v3@v3.0.0
 ```
 
 ## Usage
