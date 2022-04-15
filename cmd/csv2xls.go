@@ -4,7 +4,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/sergrom/csv2xls/internal/app"
+	"github.com/sergrom/csv2xls/v3/internal/app"
 	"github.com/spf13/cobra"
 )
 
