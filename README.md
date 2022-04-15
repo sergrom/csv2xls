@@ -1,22 +1,31 @@
 # csv2xls
 The fast <strike>and furious</strike> converter excel format csv into xls.
 
-## Usage
-After you compile the source code, run executable file as follows:
+## Install
 ```bash
-$ ./csv2xls -csv-file-name="file.csv" -xls-file-name="file.xls"
+$ go install github.com/sergrom/csv2xls@latest
 ```
 
-## Parameters and options
-<code>-csv-file-name</code> - The csv file you want to convert. Mandatory parameter.<br>
-<code>-xls-file-name</code> - The xls file name that will be created. Mandatory parameter.<br>
-<code>-csv-delimiter</code> - The delimiter that used in csv file. Optional parameter. Default value is semicolon - ";".<br>
-<code>-title</code> - The Title property of xls file. Optional parameter.<br>
-<code>-subject</code> - The Subject property of xls file. Optional parameter.<br>
-<code>-creator</code> - The Creator property of xls file. Optional parameter.<br>
-<code>-keywords</code> - The Keywords property of xls file. Optional parameter.<br>
-<code>-description</code> - The Description property of xls file. Optional parameter.<br>
-<code>-last-modified-by</code> - The LastModifiedBy property of xls file. Optional parameter.
+## Usage
+To see paramters and options type:
+```bash
+$ csv2xls -h
+```
+Example command for converting file:
+```bash
+$ csv2xls -csv-file-name="file.csv" -xls-file-name="file.xls"
+```
+
+## Explaination parameters and options
+<code>--csv-file-name</code> - The csv file you want to convert. Mandatory parameter.<br>
+<code>--xls-file-name</code> - The xls file name that will be created. Mandatory parameter.<br>
+<code>--csv-delimiter</code> - The delimiter that used in csv file. Optional parameter. Default value is semicolon - ";".<br>
+<code>--title</code> - The Title property of xls file. Optional parameter.<br>
+<code>--subject</code> - The Subject property of xls file. Optional parameter.<br>
+<code>--creator</code> - The Creator property of xls file. Optional parameter.<br>
+<code>--keywords</code> - The Keywords property of xls file. Optional parameter.<br>
+<code>--description</code> - The Description property of xls file. Optional parameter.<br>
+<code>--last-modified-by</code> - The LastModifiedBy property of xls file. Optional parameter.
 
 ## Example
 For example you have csv file with name <b>cities.csv</b> and you want to convert it into xls excel format. The content of csv file is, for example:
