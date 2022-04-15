@@ -1,28 +1,30 @@
-package main
+package app
 
 import (
 	"bytes"
 	"time"
 )
 
-type Pps struct {
-	No             int
-	Name           string
-	PpsType        uint8
-	PrevPps        uint32
-	NextPps        uint32
-	DirPps         uint32
-	Data           string
-	Size           uint32
-	StartBlock     uint32
+// pps ...
+type pps struct {
+	No         int
+	Name       string
+	PpsType    uint8
+	PrevPps    uint32
+	NextPps    uint32
+	DirPps     uint32
+	Data       string
+	Size       uint32
+	StartBlock uint32
 }
 
-func (pps *Pps) getPpsWk() string {
+// getPpsWk ...
+func (pps *pps) getPpsWk() string {
 	buf := new(bytes.Buffer)
-	putVar(buf, []byte(PadRight(pps.Name, "\x00", 64)))
+	putVar(buf, []byte(padRight(pps.Name, "\x00", 64)))
 
 	putVar(buf,
-		int16(len(pps.Name) + 2),
+		int16(len(pps.Name)+2),
 		pps.PpsType,
 		int8(0x00),
 		pps.PrevPps,

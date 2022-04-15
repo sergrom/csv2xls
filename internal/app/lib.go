@@ -1,4 +1,4 @@
-package main
+package app
 
 import (
 	"bytes"
@@ -10,7 +10,8 @@ import (
 	"unicode/utf8"
 )
 
-func PadRight(str, pad string, lenght int) string {
+// padRight ...
+func padRight(str, pad string, lenght int) string {
 	for {
 		str += pad
 		if len(str) > lenght {
@@ -19,6 +20,7 @@ func PadRight(str, pad string, lenght int) string {
 	}
 }
 
+// putVar ...
 func putVar(w io.Writer, args ...interface{}) {
 	for _, i := range args {
 		err := binary.Write(w, binary.LittleEndian, i)
@@ -29,10 +31,11 @@ func putVar(w io.Writer, args ...interface{}) {
 	}
 }
 
+// localDateToOLE ...
 func localDateToOLE(timestamp int64) string {
 	var factor int64 = 4294967296
 	var days int64 = 134774
-	bigDate :=  days * 24 * 3600 + timestamp + 10800
+	bigDate := days*24*3600 + timestamp + 10800
 	bigDate *= 10000000
 
 	highPart := int64(float64(bigDate) / float64(factor))
@@ -52,21 +55,21 @@ func localDateToOLE(timestamp int64) string {
 		highPart = int64(math.Floor(float64(highPart) / 0x100))
 	}
 
-	return buf.String();
+	return buf.String()
 }
 
-//Utility function to transform ASCII text to Unicode.
+// ascToUcs utility function to transform ASCII text to Unicode.
 func ascToUcs(ascii string) string {
 	buf := new(bytes.Buffer)
-	for i:=0; i<len(ascii); i++ {
+	for i := 0; i < len(ascii); i++ {
 		putVar(buf, ascii[i], []byte("\x00"))
 	}
 
 	return buf.String()
 }
 
-// Converts a UTF-8 string into BIFF8 Unicode string data (8-bit string length)
-func UTF8toBIFF8UnicodeShort(value string) string {
+// utf8toBIFF8UnicodeShort converts a UTF-8 string into BIFF8 Unicode string data (8-bit string length)
+func utf8toBIFF8UnicodeShort(value string) string {
 	buf := new(bytes.Buffer)
 	ln := utf8.RuneCountInString(value)
 	utf16str := utf16.Encode([]rune(value))
@@ -75,8 +78,8 @@ func UTF8toBIFF8UnicodeShort(value string) string {
 	return buf.String()
 }
 
-// Converts a UTF-8 string into BIFF8 Unicode string data (16-bit string length)
-func UTF8toBIFF8UnicodeLong(value string) string {
+// utf8toBIFF8UnicodeLong converts a UTF-8 string into BIFF8 Unicode string data (16-bit string length)
+func utf8toBIFF8UnicodeLong(value string) string {
 	buf := new(bytes.Buffer)
 	ln := utf8.RuneCountInString(value)
 	utf16str := utf16.Encode([]rune(value))
@@ -85,27 +88,30 @@ func UTF8toBIFF8UnicodeLong(value string) string {
 	return buf.String()
 }
 
-// Max returns the larger of x or y.
-func Max(x, y int) int {
-	if x < y {
-		return y
-	}
-	return x
-}
-func MaxUInt16(x, y uint16) uint16 {
+// max returns the larger of x or y.
+func max(x, y int) int {
 	if x < y {
 		return y
 	}
 	return x
 }
 
-func MinUInt16(x, y uint16) uint16 {
+// maxUInt16 ...
+func maxUInt16(x, y uint16) uint16 {
+	if x < y {
+		return y
+	}
+	return x
+}
+
+// minUInt16 ...
+func minUInt16(x, y uint16) uint16 {
 	if x > y {
 		return y
 	}
 	return x
 }
 
-func substr(slice []byte, start, length int) []byte  {
-	return slice[start:start+length]
+func substr(slice []byte, start, length int) []byte {
+	return slice[start : start+length]
 }
