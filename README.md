@@ -1,4 +1,4 @@
-![Go](https://github.com/sergrom/csv2xls/actions/workflows/go.yml/badge.svg)
+![build](https://github.com/sergrom/csv2xls/actions/workflows/build.yml/badge.svg)
 
 # csv2xls
 The fast <strike>and furious</strike> converter excel format csv into xls.
