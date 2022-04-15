@@ -1,4 +1,4 @@
-module github.com/sergrom/csv2xls/v2.2
+module github.com/sergrom/csv2xls/v2.0.3
 
 go 1.15
 
