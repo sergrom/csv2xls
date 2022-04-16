@@ -5,21 +5,26 @@
 The fast <strike>and furious</strike> converter excel format csv into xls.
 
 ## Install
+1. First, install golang:
+   https://go.dev/doc/install
+2. Then type in console:
 ```bash
 $ go install github.com/sergrom/csv2xls/v3@v3.0.1
 ```
 
 ## Usage
-To see paramters and options type:
+To see parameters and options type:
 ```bash
 $ csv2xls -h
 ```
-Example command for converting file:
+
+## Example
+To convert <code>file.csv</code> file to xls run the command below:
 ```bash
 $ csv2xls -csv-file-name="file.csv" -xls-file-name="file.xls"
 ```
 
-## Explaination parameters and options
+## Explanation parameters and options
 <code>--csv-file-name</code> - The csv file you want to convert. Mandatory parameter.<br>
 <code>--xls-file-name</code> - The xls file name that will be created. Mandatory parameter.<br>
 <code>--csv-delimiter</code> - The delimiter that used in csv file. Optional parameter. Default value is semicolon - ";".<br>
