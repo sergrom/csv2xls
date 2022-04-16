@@ -1,5 +1,5 @@
 [![build](https://github.com/sergrom/csv2xls/workflows/build/badge.svg)](https://github.com/sergrom/csv2xls/actions/workflows/build.yml)
-[![test](https://github.com/sergrom/csv2xls/workflows/test/badge.svg)](https://github.com/sergrom/csv2xls/actions/workflows/test.yml)
+[![](https://img.shields.io/github/workflow/status/sergrom/csv2xls/test?longCache=tru&label=Test&logo=github%20actions&logoColor=fff)](https://github.com/sergrom/csv2xls/actions?query=workflow%3Atest)
 
 # csv2xls
 The fast <strike>and furious</strike> converter excel format csv into xls.
