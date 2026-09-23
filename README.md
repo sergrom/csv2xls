@@ -11,7 +11,7 @@ CSV parsing and command-line options are handled by this project.
    https://go.dev/doc/install
 2. Then type in console:
 ```bash
-$ go install github.com/sergrom/csv2xls/v3@v3.0.1
+$ go install github.com/sergrom/csv2xls/v3@v3.1.0
 ```
 
 ## Usage
