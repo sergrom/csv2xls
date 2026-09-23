@@ -1,4 +1,8 @@
 [![build](https://github.com/sergrom/csv2xls/workflows/build/badge.svg)](https://github.com/sergrom/csv2xls/actions/workflows/build.yml)
+[![Go Reference](https://pkg.go.dev/badge/github.com/sergrom/csv2xls/v3.svg)](https://pkg.go.dev/github.com/sergrom/csv2xls/v3)
+[![Go Report Card](https://goreportcard.com/badge/github.com/sergrom/csv2xls/v3)](https://goreportcard.com/report/github.com/sergrom/csv2xls/v3)
+[![Latest release](https://img.shields.io/github/v/release/sergrom/csv2xls)](https://github.com/sergrom/csv2xls/releases)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 # csv2xls
 The fast <strike>and furious</strike> converter excel format csv into xls.
